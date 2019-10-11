@@ -1,13 +1,12 @@
-interface user {
-  id: String | null,
-  fname: String | null,
-  lname: String | null
+type user = {
+  id?: String,
+  fname: String,
+  lname: String
 };
 
 const INITIAL_STATE = {
-  id: null,
-  fname: null,
-  lname: null
+  fname: 'Unknown',
+  lname: 'User'
 };
 
 export default (state: user = INITIAL_STATE, action:any) => {
